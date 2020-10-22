@@ -1,0 +1,35 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.search-container{
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3%;
+    height: 30px;
+}
+#search-bar{
+    height: 27px;
+    width: 50%;
+    color: black;
+    font-size: 100%;
+    padding: 2px;
+}
+#search-button{
+    width: 10%;
+    background-color: rgb(132, 132, 230);
+    color: white;
+    height: 35px;
+    text-align: center;
+    font-size: 100%;
+}
+.card-container{
+    /* background-color: rgb(211, 172, 172); */
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+}
