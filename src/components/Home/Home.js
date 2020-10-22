@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import  './Home.css';
 import store from '../../redux/Store/Store';
-import {addToFav,RemoveFromFav} from '../../redux/Action/Action';
+import {addToFav} from '../../redux/Action/Action';
 import { connect } from 'react-redux';
 
 export default function Home(){
