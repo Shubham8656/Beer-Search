@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { } from 'react';
 import  './Favourite.css';
 // import Card from '../Card/Card'
 import { connect } from 'react-redux';
 
 export default function Favourite(props){
-    const [data,setdata] = useState([])
-    useEffect(()=>{
-        setdata([props.cart])
-        console.log(data)
-    },[])
-    console.log(props.cart)
+    // const [data,setdata] = useState([])
+    // useEffect(()=>{
+    //     setdata([props.cart])
+    //     console.log(data)
+    // },[])
+    // console.log(props.cart)
     return(
         <div className='favourite-container'>
             
