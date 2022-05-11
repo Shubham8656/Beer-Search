@@ -1,14 +1,11 @@
 import React from 'react';
 import  './Card.css';
 import { connect } from 'react-redux';
+import { addToFav } from '../../redux/Action/Action';
 
 export default function Card(props){
     function check(){
-    //    let checkBox = document.getElementsByClassName("star");
-    //    console.log(checkBox.checked)
-       console.log(props.name)
-       props.sendToFav(props.name)
-    //    store.dispatch(addToFav({}))
+       props.sendToFav(props.ele)
     }
     return(
         <div className='card'>
@@ -16,7 +13,7 @@ export default function Card(props){
             <div className='img-content'>
                 <img id='image' src={props.image} alt=''/>
                 <div className='description'>
-                    <input className="star" type="checkbox" onClick={check} />
+                    <input className="star" type="checkbox" checked ={props.checked} onClick={check} />
                     <div className='header'>{props.name}</div>
                     <div className='info'>{props.desc}</div>
                 </div>
@@ -25,7 +22,7 @@ export default function Card(props){
         </div>
     );
 }
-// const mapDispatchToProps=(dispatch)=>{
-
-// }
-connect()(Card);
+const mapDispatchToProps=(dispatch)=>({
+    addToFav:(ele)=>{dispatch(addToFav(ele))}
+})
+connect(mapDispatchToProps)(Card);

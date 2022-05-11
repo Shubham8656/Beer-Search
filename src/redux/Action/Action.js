@@ -1,4 +1,5 @@
 export const addToFav=(item)=>{
+    console.log("in action",item)
     return{
         type:'ADD_TO_FAV',
         payload:item
